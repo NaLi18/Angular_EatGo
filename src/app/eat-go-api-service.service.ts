@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EatGoApiServiceService {
-  API_KEY:string = "AIzaSyCl1Brlbq3IB2bq5WLX0X7iVMUpG7rLHvg"
+  API_KEY:string = 'AIzaSyCanIiqmWSJarc9Q1ngxvc0T-b-LG4D_N8'
   constructor(private httpClient: HttpClient) { }
 
-  public getRestaurant(){
-    return this.httpClient.get<Config>(`https://eatgoapi.org/v2/top-headlines?country=us&category=business&apiKey=${this.API_KEY}`);
+  getRestaurant(){
+    return this.httpClient.get<Config>(`https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+in+Sydney&key=${this.API_KEY}`);
   }
 }
 
