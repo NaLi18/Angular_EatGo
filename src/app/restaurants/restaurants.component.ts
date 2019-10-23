@@ -12,7 +12,7 @@ export class RestaurantsComponent implements OnInit {
   ngOnInit() {
     this.restaurantApi.getRestaurant().subscribe((data)=> {
       console.log(data);
-      this.restaurants = data['resturants'];
+      this.restaurants = data['results'];
     })
   }
 
