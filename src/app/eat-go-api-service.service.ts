@@ -10,7 +10,7 @@ export class EatGoApiServiceService {
   constructor(private httpClient: HttpClient) { }
 
   public getRestaurant(){
-    return this.httpClient.get<Config>(`https://eatgoapi.org/v2/top-headlines?sources=techcrunch&apiKey=${this.API_KEY}`);
+    return this.httpClient.get<Config>(`https://eatgoapi.org/v2/top-headlines?country=us&category=business&apiKey=${this.API_KEY}`);
   }
 }
 
